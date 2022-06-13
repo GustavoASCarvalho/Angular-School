@@ -1,0 +1,14 @@
+ul {
+    text-align: justify;
+    list-style: none;
+
+    :last-child {
+        margin-bottom: 10px;
+    }
+
+    li {
+        margin-top: 10px;
+        text-indent: 20px;
+        font-family: sans-serif;
+    }
+}

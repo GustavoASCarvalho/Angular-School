@@ -1,0 +1,14 @@
+<div class="buttons">
+    <button (click)="addRandonColaborador()" [ngClass]="{'green': true, 'disabled': colaboradores.length >= 10}"> Adicionar Colaborador </button>
+    <button (click)="removeColaborador()" [ngClass]="{'red': true,'disabled': !colaboradores.length}"> Remover Colaborador </button>
+</div>
+<p *ngIf="colaboradores.length >= 10">Total de colaboradores alcançado</p>
+<div class="content">
+    <br>
+    <div class="card" *ngFor="let colaborador of colaboradores">
+        <p>id: {{ colaborador.id }}</p>
+        <p>nome: {{ colaborador.nome }}</p>
+        <p>salario: {{ colaborador.salario }}</p>
+        <p>cargo: {{ colaborador.cargo }}</p>
+    </div>
+</div>

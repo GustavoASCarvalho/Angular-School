@@ -1,0 +1,48 @@
+.content {
+    padding: 15px 40px;
+    width: 100%;
+    height: 40px;
+    background-color: #212121;
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+
+    &__menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+
+        li {
+            cursor: pointer;
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+
+        li:first-child {
+            font-weight: bold;
+        }
+    }
+
+    &__user {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+
+        &__image {
+            img {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+            }
+        }
+    }
+}

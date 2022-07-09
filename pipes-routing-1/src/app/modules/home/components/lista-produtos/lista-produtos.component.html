@@ -1,0 +1,21 @@
+<div class="content">
+    <div class="content__card" *ngFor="let produto of produtos">
+        <div class="content__card__img">
+          <img src="{{ produto.imagem }}">
+        </div>
+        <div class="content__card__info">
+          <div class="content__card__info__date">
+            <span>{{ produto.data | date:'mediumDate'}}</span>
+          </div>
+          <div class="content__card__info__text">
+            <h1>{{ produto.nome }}</h1>
+            <h2>por {{ produto.fabricante }}</h2>
+            <p>{{ produto.descricao }}</p>
+          </div>
+          <div class="content__card__info__price">
+            <p>{{ produto.preco | currency: 'R$' }}</p>
+            <button type="button">comprar</button>
+          </div>
+        </div>
+    </div>
+</div>

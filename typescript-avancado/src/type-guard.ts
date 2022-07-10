@@ -15,10 +15,14 @@ export type User = GuestUser | AuthenticatedUser;
 
 // Crie uma função de type-guard que sirva para afunilar o tipo específico de User
 
-function checkUserType(user: User) {
-    if (user.type === 'guest') {
-        return user; // tipo GuestUser
+function typeGuard(x: any): x is GuestUser {
+    return x.type === 'guest';
+}
+
+function afunilamento(user: User) {
+    if (typeGuard(user)) {
+        console.log(user);
     } else {
-        return user; // tipo AuthenticatedUser
+        console.log(user);
     }
 }

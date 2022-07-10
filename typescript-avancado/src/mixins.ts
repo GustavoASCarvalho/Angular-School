@@ -7,6 +7,11 @@
 
 export type Constructor<T = {}> = new (...args: any[]) => T;
 
+type HasName = {
+    firstName: string
+    lastName: string
+}
+
 export function named<TBase extends Constructor>(base: TBase) {
     return class extends base {
         firstName: string = 'Gustavo'
@@ -14,9 +19,15 @@ export function named<TBase extends Constructor>(base: TBase) {
     }
 }
 
-const HasName = named(Node);
-const hasName = new HasName()
+export function fullNamed<TBase extends Constructor<HasName>>(base: TBase) {
+    return class extends base {
+        getFullNamed() {
+            return `${this.firstName} ${this.lastName}`
+        }
+    }
+}
 
-hasName.firstName = '2';
+const HasFullName = fullNamed(named(class { }));
+const hasFullName = new HasFullName()
 
-
+console.log(hasFullName.getFullNamed())

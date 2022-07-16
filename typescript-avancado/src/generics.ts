@@ -2,6 +2,7 @@
 
 // refatore esses tipos utilizando um tipo genérico
 
-export type Item = {
-    valor: string | number;
-}
+type Item<T> = { valor: T };
+
+export type ItemTexto = Item<string>;
+export type ItemNumerico = Item<number>;

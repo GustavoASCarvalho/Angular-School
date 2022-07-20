@@ -1,0 +1,95 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b8/Academia_do_SESC_Guarulhos%2C_Maratona_de_fotografia%2C_junho_de_2019.jpg');
+    filter: opacity(0.8);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.content {
+
+    //card no meio da tela
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 400px;
+
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+    &__title {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        font-family: sans-serif;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+
+        &__field input {
+            //input
+            width: 100%;
+            height: 40px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            padding: 0 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            background-color: #fff;
+            outline: none;
+            transition: all 0.3s ease-in-out;
+
+            &:focus {
+                border: 1px solid #333;
+            }
+        }
+    }
+
+    &__error {
+        color: red;
+        font-size: 12px;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+
+    &__button {
+        width: 100%;
+        height: 40px;
+        border-radius: 20px;
+        border: 1px solid #ccc;
+        padding: 0 10px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+        background-color: #fff;
+        outline: none;
+        transition: all 0.3s ease-in-out;
+
+        &:focus {
+            border: 1px solid #333;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+}

@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="content">
+        <div class="content__title">Login ou Cadastro</div>
+        <form class="content__form">
+            <div class="content__form__field">
+                <input type="email" [(ngModel)]="email" placeholder="Digite seu email" name="email">
+            </div>
+            <div class="content__form__field">
+                <input type="password" [(ngModel)]="senha" placeholder="Digite sua senha" name="password">
+            </div>
+        </form>
+        <p *ngIf="mensagemErro"  class="content__error">{{mensagemErro}}</p>
+        <button class="content__button" (click)="entrar()">
+            Entrar
+        </button>
+    </div>
+</div>

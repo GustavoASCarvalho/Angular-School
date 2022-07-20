@@ -1,0 +1,21 @@
+<div class="content">
+    <h1>Lista de usuario da academia</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Valor Mensalidade</th>
+                <th>Ult. Pagamento</th>
+                <th>Data Inicio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let usuario of listaUsuarios">
+                <td>{{ usuario.nome }}</td>
+                <td>{{ usuario.valorMensalidade | currency: 'R$'}}</td>
+                <td>{{ usuario.dataUltimoPgto | date: 'longDate'}}</td>
+                <td>{{ usuario.dataInclusaoSistema | date: 'longDate'}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
